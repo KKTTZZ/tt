@@ -11,10 +11,10 @@ window.addEventListener('load', function() {
         document.getElementById('main-screen').style.display = 'flex';
     }, 4000); // Change the timeout duration to 4000 milliseconds (4 seconds)
 
-    document.getElementById('tap-square').addEventListener('click', function() {
+    document.getElementById('tap-gif').addEventListener('click', function() {
         coinCount++;
         xpCount++;
-        document.getElementById('coin-counter').innerText = coinCount;
+        document.getElementById('coin-counter').innerText = `Coins: ${coinCount}`;
         document.getElementById('xp-counter').innerText = xpCount;
         showCoinAnimation();
         showXpAnimation();
