@@ -1,5 +1,9 @@
 let coinCount = 0;
 let xpCount = 0;
+let taps = 0;
+let soundEnabled = true;
+
+const sound = new Audio('your-sound-file.mp3'); // Замените на путь к вашему аудиофайлу
 
 window.addEventListener('load', function() {
     // Initialize Telegram Web App
@@ -12,12 +16,22 @@ window.addEventListener('load', function() {
     }, 4000); // Change the timeout duration to 4000 milliseconds (4 seconds)
 
     document.getElementById('tap-gif').addEventListener('click', function() {
+        taps++;
         coinCount++;
         xpCount++;
         document.getElementById('coin-counter').innerText = `Coins: ${coinCount}`;
         document.getElementById('xp-counter').innerText = xpCount;
         showCoinAnimation();
         showXpAnimation();
+
+        if (taps % 10 === 0 && soundEnabled) {
+            sound.play();
+        }
+    });
+
+    document.getElementById('sound-toggle').addEventListener('click', function() {
+        soundEnabled = !soundEnabled;
+        document.getElementById('sound-toggle').style.opacity = soundEnabled ? '1' : '0.5';
     });
 });
 
