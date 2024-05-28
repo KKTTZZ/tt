@@ -36,13 +36,13 @@ body, html {
     position: relative;
 }
 
-#tap-square {
-    width: 100px;
-    height: 100px;
-    background-color: gold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#tap-area {
+    position: relative;
+}
+
+#tap-gif {
+    width: 200px;
+    height: auto;
     cursor: pointer;
 }
 
@@ -91,19 +91,19 @@ body, html {
     font-weight: bold;
     color: gold;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 10%;
+    transform: translateY(-50%);
     animation: coinAnimation 1s forwards;
 }
 
 @keyframes coinAnimation {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%) translateY(0);
+        transform: translateY(0);
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) translateY(-50px);
+        transform: translateY(-50px);
     }
 }
 
@@ -112,19 +112,19 @@ body, html {
     font-size: 24px;
     font-weight: bold;
     color: green;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
     animation: xpAnimation 1s forwards;
 }
 
 @keyframes xpAnimation {
     0% {
         opacity: 1;
-        transform: translate(-50%, -50%) translateY(0);
+        transform: translateY(0);
     }
     100% {
         opacity: 0;
-        transform: translate(-50%, -50%) translateY(-50px);
+        transform: translateY(-50px);
     }
 }
