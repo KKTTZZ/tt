@@ -2,10 +2,13 @@ let coinCount = 0;
 let xpCount = 0;
 
 window.addEventListener('load', function() {
+    // Initialize Telegram Web App
+    Telegram.WebApp.ready();
+
     // Simulate loading time
     setTimeout(function() {
         document.getElementById('loading-screen').style.display = 'none';
-        document.getElementById('main-screen').style.display = 'flex'; // исправлено на flex для корректного отображения
+        document.getElementById('main-screen').style.display = 'flex';
     }, 4000); // Change the timeout duration to 4000 milliseconds (4 seconds)
 
     document.getElementById('tap-square').addEventListener('click', function() {
